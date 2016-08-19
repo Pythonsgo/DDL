@@ -3,13 +3,11 @@
 ##########################################################################
 ## Imports
 ##########################################################################
-
 import csv
 
 ##########################################################################
 ## Module Constants
 ##########################################################################
-
 DATAPATH = 'languageWikiList.csv'
 OUTPATH = 'languageFileURL.csv'
 
@@ -18,7 +16,6 @@ field_names = ["Language", "Code", "Wiki", "Download_url"]
 ##########################################################################
 ## Modules
 ##########################################################################
-
 # This function reads a CSV file and loads content into a dictionary.
 def read_file_location(path, fieldnames):
 	with open(path, 'rU') as data:
@@ -27,10 +24,9 @@ def read_file_location(path, fieldnames):
 			yield row		
 									
 ##########################################################################
-## Program takes list of wikipedia languages and obtains the url for the
+## Program takes list of wikipedia languages and obtains the URL for the
 ## location of the back-up files for each language.
 ##########################################################################
-
 if __name__ == "__main__":	
     with open(OUTPATH, 'wb') as f:
 	    dict_writer = csv.DictWriter(f, field_names)
