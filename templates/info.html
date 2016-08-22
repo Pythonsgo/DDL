@@ -1,0 +1,22 @@
+<!doctype html>
+<title>User Input</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_sheet.css')}}'>
+<div class=page>
+  <h1>Welcome to the Language Identifier App</h1>
+  <div class=metanav>
+
+    <h4>
+      Please enter the text for which you would like the language identified.
+    </h4>
+
+    <form id='userinfoform' method='post' action='index' >
+      <p>
+    Text: <input type='text' name='user_info' charset="utf-8" />
+      </p>
+      <p>
+    <input type='submit' value='Submit' />
+      </p>
+    </form>
+
+  </div>
+</div>
